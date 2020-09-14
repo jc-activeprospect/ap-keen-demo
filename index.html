@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/keen-analysis@3"></script>
+    <link href="https://cdn.jsdelivr.net/npm/keen-dataviz@3/dist/keen-dataviz.min.css" rel="stylesheet" />
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/keen-dataviz@3/dist/keen-dataviz.min.js"></script>
+  </head>
+  <body>
+
+    <style>
+      html, body {
+      font-family: Impact, sans-serif !important;
+      text-align: center;
+      }
+      body{
+        margin-left: 275px;
+        margin-right: 275px;
+      }
+      .keen-dataviz-metric-value {
+        font-family: Impact, Charcoal, sans-serif !important;
+        background: #f2f2f2 !important;
+        color: black;
+      }
+      .keen-dataviz-metric {
+        font-family: Impact, Charcoal, sans-serif !important;
+        background: #f2f2f2 !important;
+        color: black;
+      }
+      .keen-dataviz-metric-title{
+        font-family: Impact, Charcoal, sans-serif !important;
+        background: #f2f2f2 !important;
+      }
+      .keen-dataviz-title {
+        font-family: Impact, Charcoal, sans-serif !important;
+        color: black;
+        font-size: 2em;
+        font-weight: 200;
+        width: 100%;
+      }
+      #demo_container {
+        min-height: 100px;
+      }
+      #demo_container_2 {
+        min-height: 300px;
+        padding-top: 1em;
+      }
+      #demo_container_3 {
+        min-height: 300px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      #country {
+        text-align-last: center;
+      }
+      input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      input[type=submit] {
+        font-family: Impact, sans-serif !important;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center !important;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+        text-align: center !important;
+      }
+      /* select {
+        display: inline-block;
+        text-align: center !important;
+        align-items: center !important;
+      } */
+      div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        text-align: center !important;
+        /* padding: 20px; */
+        /* margin-left: 50px;
+        width: 60%; */
+      }
+      h1 {
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 42px;
+      }
+      form {
+          display: block;
+          padding: 20px;
+          /* padding-top: 1em;
+          padding-bottom: 1em; */
+          /* width: 40% !important; */
+      }
+
+    </style>
+    <body>
+
+    <h1>ActiveProspect | Keen.io</h1>
+    <!-- <h2>Form Example</h2> -->
+
+    <div>
+      <form action="https://activeprospect.com/">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <!-- <h2>Analytics Example</h2> -->
+    <br>
+    <div id="demo_container"></div>
+    <br>
+    <div id="demo_container_2"></div>
+    <br>
+    <!-- Disabled -->
+    <div id="demo_container_3"></div>
+
+
+    <script>
+      (function(name,path,ctx){ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}})
+      ('KeenTracking', 'https://cdn.jsdelivr.net/npm/keen-tracking@4/dist/keen-tracking.min.js', this);
+
+      KeenTracking.ready(function(){
+        const client = new KeenTracking({
+          projectId: '5f524a863d270e0dcc104fd7',
+          writeKey: '1d948840b92da40fca38a5e3b2e6950dd326a9fd8281fa8fcd2068761bfe617213caa11a23e3f8b1292937822cedc3f0eb51a543057bcdc74b7310ca06ff37fc0858817dc6698af6955c56f60304d2beabe7afab3c94118bbb0451a5d93c87dd'
+        });
+
+        // Record events automatically
+        client.initAutoTracking();
+      });
+      // Use keen-analysis.js to run a query
+      const client = new KeenAnalysis({
+        projectId: '5f524a863d270e0dcc104fd7',
+        readKey: '7d43ee16837e7c9106731867219ce1a5cb4d77b29f87b4a0ed9355c958c971da044d6c238afdc2df1109751e6227ac2290b87c47e0b0d6b79e62c21ea32f6628739651d65da63bac46ee498db53221d0079b99c026a9d85f4418ac442ac52e42'
+      });
+
+      // Chart 1 Count of Pageviews
+      const chart = new KeenDataviz({
+        container: '#demo_container', // querySelector
+        type: 'metric',
+        title: 'Page Views'
+      });
+
+      // Query #1
+      client
+        .query({
+          analysisType: 'count',
+          eventCollection: 'pageviews',
+          timeframe: "this_14_days",
+          timezone: "US/Central"
+        })
+        .then(function(results){
+          chart
+            .render(results);
+        })
+        .catch(function(error){
+          chart
+            .message(error.message);
+        });
+
+      // Chart 2 Form Submits
+      const chart2 = new KeenDataviz({
+        container: '#demo_container_2', // querySelector
+        type: 'area-spline',
+        title: 'Form Submissions',
+      });
+
+      // Query #2
+      client
+        .query({
+          analysisType: 'count',
+          eventCollection: 'form_submissions',
+          timeframe: "this_14_days",
+          interval: 'daily',
+          groupBy: ["tech.browser.family"],
+          timezone: "US/Central",
+        })
+        .then(function(results){
+          chart2
+            .render(results);
+        })
+        .catch(function(error){
+          chart2
+            .message(error.message);
+        });
+
+      // Chart 3 FF by Country
+      const chart3 = new KeenDataviz({
+        container: '#demo_container_3', // querySelector
+        type: 'donut',
+        title: false,
+        title: 'Form Fields By Country',
+      });
+      // Query #3
+      client
+        .query({
+          analysisType: 'count',
+          eventCollection: 'form_submissions',
+          timeframe: "this_14_days",
+          groupBy: ["form.fields.country"],
+        })
+        .then(function(results){
+          chart3
+            .render(results);
+        })
+        .catch(function(error){
+          chart3
+            .message(error.message);
+        });
+
+    </script>
+
+  </body>
+</html>
